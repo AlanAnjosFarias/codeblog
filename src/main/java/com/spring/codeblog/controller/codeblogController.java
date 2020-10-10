@@ -19,8 +19,7 @@ public class codeblogController {
 	
 	@RequestMapping(value = "/posts", method = RequestMethod.GET)
 	public ModelAndView getPosts() {
-		ModelAndView mv = new ModelAndView("posts");
-		ModelAndView mvs = new ModelAndView("posts");
+		ModelAndView mv = new ModelAndView("posts");		
 		List<Post> posts = codeblogService.findAll();		
 		mv.addObject("posts", posts);
 		return mv;
